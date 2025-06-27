@@ -1,0 +1,178 @@
+.map-section {
+    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.map-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--nm-shadow);
+    min-height: 400px;
+}
+
+/* Фільтри */
+.map-filters {
+    position: absolute;
+    top: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--nm-shadow);
+    backdrop-filter: blur(10px);
+}
+
+.btn-filter {
+    font-size: 0.9rem;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.filter-icon {
+    width: 16px;
+    height: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--nm-shadow-hover);
+}
+
+.btn-filter:hover .filter-icon {
+    transform: scale(1.2);
+}
+
+.btn-filter.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-filter.active .filter-icon {
+    transform: scale(1.2);
+}
+
+/* Легенда */
+.map-legend {
+    position: absolute;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    background-color: var(--background-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--nm-shadow);
+    z-index: 1000;
+}
+
+.map-legend h3 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.legend-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.legend-icon.apple {
+    color: #FF7043;
+}
+
+.legend-icon.electronics {
+    color: #00897B;
+}
+
+.legend-icon.computers {
+    color: #5C6BC0;
+}
+
+/* Popup стилі */
+.leaflet-popup-content-wrapper {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--nm-shadow);
+}
+
+.leaflet-popup-tip {
+    background-color: var(--background-color);
+}
+
+.store-popup {
+    padding: var(--spacing-xs);
+}
+
+.store-popup h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.store-popup p {
+    margin: var(--spacing-xs) 0;
+    font-size: 0.9rem;
+}
+
+.store-popup .store-hours {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .map-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .btn-filter {
+        font-size: 0.8rem;
+    }
+
+    .map-legend {
+        bottom: var(--spacing-lg);
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+/* Темна тема */
+[data-theme="dark"] .leaflet-popup-content-wrapper,
+[data-theme="dark"] .leaflet-popup-tip {
+    background-color: var(--background-color);
+}
+
+[data-theme="dark"] .store-popup h3 {
+    color: var(--secondary-color);
+} 

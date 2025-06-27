@@ -1,0 +1,286 @@
+.rating-section {
+    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Фільтри */
+.rating-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.btn-filter {
+    font-size: 0.9rem;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.btn-filter.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Сітка рейтингу */
+.rating-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Картка магазину */
+.store-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.store-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: all var(--transition-normal);
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.store-card:hover::before {
+    transform: translateX(100%);
+}
+
+.store-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.store-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-md);
+    color: white;
+    transition: all var(--transition-fast);
+}
+
+.store-card:hover .store-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.store-address {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.store-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.rating-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: var(--secondary-color);
+    transition: all var(--transition-fast);
+}
+
+.store-card:hover .star {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.rating-value {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.store-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    transition: all var(--transition-fast);
+}
+
+.store-card:hover .detail-item i {
+    transform: translateX(3px);
+}
+
+.store-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+}
+
+.store-tag {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--background-color);
+    box-shadow: var(--nm-shadow-inset);
+}
+
+.store-tag.apple {
+    color: #FF7043;
+}
+
+.store-tag.electronics {
+    color: #00897B;
+}
+
+.store-tag.computers {
+    color: #5C6BC0;
+}
+
+/* Кнопка "На карті" */
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .rating-section {
+        padding: 80px var(--spacing-md) var(--spacing-md);
+    }
+
+    .rating-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .store-card {
+        padding: var(--spacing-md);
+    }
+
+    .store-header {
+        gap: var(--spacing-sm);
+    }
+
+    .store-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .store-name {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating-section {
+        padding: 60px var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .rating-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .rating-filters {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-sm);
+    }
+
+    .filter-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-select {
+        flex: 1;
+    }
+}
+
+/* Темна тема */
+[data-theme="dark"] .store-card h3 {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .store-info i {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .rating-value {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .map-link {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .map-link:hover {
+    color: var(--primary-color);
+} 

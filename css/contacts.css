@@ -1,0 +1,242 @@
+.contacts-section {
+    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Сітка контактів */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+}
+
+/* Контактна інформація */
+.contact-info {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: all var(--transition-normal);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.contact-info:hover::before {
+    transform: translateX(100%);
+}
+
+.info-item h3 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.info-item p {
+    font-size: 0.9rem;
+}
+
+/* Соціальні мережі */
+.social-links {
+    margin-top: var(--spacing-xl);
+}
+
+.social-links h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--nm-shadow);
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon i {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+}
+
+/* Форма зворотного зв'язку */
+.contact-form {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: all var(--transition-normal);
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form:hover::before {
+    transform: translateX(100%);
+}
+
+.form-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.form-heading i {
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: none;
+    border-radius: var(--border-radius-md);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: var(--nm-shadow-inset);
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: var(--nm-shadow);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+    .contacts-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+
+    .contact-heading,
+    .form-heading {
+        font-size: 1.25rem;
+    }
+
+    .contact-item {
+        padding: var(--spacing-sm);
+    }
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-section {
+        padding: 150px var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .contacts-container {
+        padding: var(--spacing-sm);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Темна тема */
+[data-theme="dark"] .info-item i {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .info-item h3 {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .social-links h3 {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .social-icon i {
+    color: var(--secondary-color);
+} 

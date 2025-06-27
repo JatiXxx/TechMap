@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакти та форма зворотного зв'язку">
+    <title>Контакти | TechMap</title>
+    
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Власні стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Головне меню -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">TechMap</a>
+            </div>
+            <button class="theme-toggle" aria-label="Перемкнути тему">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Відкрити меню">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="rating.html">Рейтинг магазинів</a></li>
+                <li><a href="map.html">Карта ТОП-20</a></li>
+                <li><a href="tips.html">Поради покупцям</a></li>
+                <li><a href="contacts.html" class="active">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Головний контент -->
+    <main class="main">
+        <section class="contacts-section">
+            <div class="container">
+                <h1>Контакти</h1>
+                <p class="section-description">Зв'яжіться з нами для отримання додаткової інформації</p>
+
+                <div class="contacts-grid">
+                    <!-- Контактна інформація -->
+                    <div class="contact-info">
+                        <h2>Наші контакти</h2>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i data-lucide="mail"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>kozhuhar.contact@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="phone"></i>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p>+380 (68) ***-**-**</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="clock"></i>
+                                <div>
+                                    <h3>Робочі години</h3>
+                                    <p>Пн-Пт: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <h3>Адреса</h3>
+                                    <p>м. Вінниця, вул. Соборна, 70</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Соціальні мережі</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <i data-lucide="facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <i data-lucide="instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Telegram">
+                                    <i data-lucide="send"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Форма зворотного зв'язку -->
+                    <div class="contact-form">
+                        <h2>Напишіть нам</h2>
+                        <form id="contactForm" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="name">Ім'я</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Повідомлення</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Надіслати</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Про проект</h4>
+                    <p>Інтерактивна карта та рейтинг магазинів комп'ютерної техніки</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="rating.html">Рейтинг</a></li>
+                        <li><a href="map.html">Карта магазинів</a></li>
+                        <li><a href="tips.html">Поради покупцям</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакти</h4>
+                    <p>Email: kozhuhar.contact@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechMap. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script src="js/main.js"></script>
+    <script src="js/contacts.js"></script>
+</body>
+</html> 

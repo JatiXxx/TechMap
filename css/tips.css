@@ -1,0 +1,205 @@
+.tips-section {
+    padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Сітка порад */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Картка поради */
+.tip-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-lg);
+    box-shadow: var(--nm-shadow);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tip-card:hover::before {
+    transform: translateX(100%);
+}
+
+.tip-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--nm-shadow);
+}
+
+.tip-icon i {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+}
+
+.tip-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.tip-card p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.tip-card ul {
+    list-style: none;
+    padding-left: var(--spacing-md);
+}
+
+.tip-card ul li {
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+}
+
+.tip-card ul li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+/* Корисні посилання */
+.useful-links {
+    margin-top: var(--spacing-xl);
+}
+
+.useful-links h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--nm-shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+}
+
+.link-card i {
+    width: 32px;
+    height: 32px;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.link-card h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.link-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .tips-section {
+        padding: 80px var(--spacing-md) var(--spacing-md);
+    }
+
+    .tips-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .tip-card {
+        padding: var(--spacing-md);
+    }
+
+    .tip-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tip-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tips-section {
+        padding: 60px var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .tips-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .tips-filters {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-sm);
+    }
+
+    .filter-btn {
+        width: calc(50% - var(--spacing-xs));
+        justify-content: center;
+    }
+}
+
+/* Темна тема */
+[data-theme="dark"] .tip-icon i {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .tip-card h3 {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .tip-card ul li::before {
+    background-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .link-card i {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .link-card h4 {
+    color: var(--secondary-color);
+} 

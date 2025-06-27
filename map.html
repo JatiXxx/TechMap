@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інтерактивна карта магазинів комп'ютерної техніки Вінниці">
+    <title>Карта магазинів | TechMap</title>
+    
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Leaflet.Locate -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Власні стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Головне меню -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">TechMap</a>
+            </div>
+            <button class="theme-toggle" aria-label="Перемкнути тему">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Відкрити меню">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="rating.html">Рейтинг магазинів</a></li>
+                <li><a href="map.html" class="active">Карта ТОП-20</a></li>
+                <li><a href="tips.html">Поради покупцям</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Головний контент -->
+    <main class="main">
+        <section class="map-section">
+            <div class="map-container">
+                <div class="map-filters">
+                    <button class="btn btn-filter active" data-filter="all">
+                        <i data-lucide="map" class="filter-icon"></i>
+                        Всі магазини
+                    </button>
+                    <button class="btn btn-filter" data-filter="apple">
+                        <i data-lucide="apple" class="filter-icon"></i>
+                        Apple магазини
+                    </button>
+                    <button class="btn btn-filter" data-filter="electronics">
+                        <i data-lucide="smartphone" class="filter-icon"></i>
+                        Електроніка
+                    </button>
+                    <button class="btn btn-filter" data-filter="computers">
+                        <i data-lucide="monitor" class="filter-icon"></i>
+                        Комп'ютерна техніка
+                    </button>
+                </div>
+                <div id="map"></div>
+                <div class="map-legend">
+                    <h3>Умовні позначення</h3>
+                    <div class="legend-item">
+                        <i data-lucide="map-pin" class="legend-icon apple"></i>
+                        <span>Apple магазини</span>
+                    </div>
+                    <div class="legend-item">
+                        <i data-lucide="map-pin" class="legend-icon electronics"></i>
+                        <span>Магазини електроніки</span>
+                    </div>
+                    <div class="legend-item">
+                        <i data-lucide="map-pin" class="legend-icon computers"></i>
+                        <span>Комп'ютерна техніка</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Про проект</h4>
+                    <p>Інтерактивна карта та рейтинг магазинів комп'ютерної техніки</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="rating.html">Рейтинг</a></li>
+                        <li><a href="map.html">Карта магазинів</a></li>
+                        <li><a href="tips.html">Поради покупцям</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакти</h4>
+                    <p>Email: kozhuhar.contact@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechMap. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html> 

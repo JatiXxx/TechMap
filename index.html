@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Магазини комп'ютерної техніки міста Вінниця">
+    <title>Комп'ютерні магазини Вінниці</title>
+    
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Власні стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Головне меню -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">TechMap</a>
+            </div>
+            <button class="theme-toggle" aria-label="Перемкнути тему">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Відкрити меню">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="rating.html">Рейтинг магазинів</a></li>
+                <li><a href="map.html">Карта ТОП-20</a></li>
+                <li><a href="tips.html">Поради покупцям</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Головний контент -->
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content-wrapper">
+                <div class="hero-content">
+                    <h1>Знайдіть найкращі магазини комп'ютерної техніки</h1>
+                    <p>Інтерактивна карта та рейтинг магазинів допоможуть вам зробити правильний вибір</p>
+                    <a href="map.html" class="btn btn-primary">Переглянути карту</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/map.png" alt="Ілюстрація карти магазинів">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Чому варто користуватися нашим сервісом?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-lucide="map-pin"></i>
+                        <h3>20 найкращих магазинів</h3>
+                        <p>Ретельно відібрані магазини комп'ютерної техніки Вінниці</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="star"></i>
+                        <h3>Рейтинги та відгуки</h3>
+                        <p>Реальні оцінки від покупців</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="map"></i>
+                        <h3>Інтерактивна карта</h3>
+                        <p>Зручний пошук найближчого магазину</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Про проект</h4>
+                    <p>Інтерактивна карта та рейтинг магазинів комп'ютерної техніки</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="rating.html">Рейтинг</a></li>
+                        <li><a href="map.html">Карта магазинів</a></li>
+                        <li><a href="tips.html">Поради покупцям</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакти</h4>
+                    <p>Email: kozhuhar.contact@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechMap. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script>
+        // Ініціалізація Lucide іконок
+        lucide.createIcons();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

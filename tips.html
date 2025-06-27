@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Корисні поради щодо вибору магазину комп'ютерної техніки у Вінниці">
+    <title>Поради покупцям | TechMap</title>
+    
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Власні стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/tips.css">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Головне меню -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">TechMap</a>
+            </div>
+            <button class="theme-toggle" aria-label="Перемкнути тему">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Відкрити меню">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="rating.html">Рейтинг магазинів</a></li>
+                <li><a href="map.html">Карта ТОП-20</a></li>
+                <li><a href="tips.html" class="active">Поради покупцям</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Головний контент -->
+    <main class="main">
+        <section class="tips-section">
+            <div class="container">
+                <h1>Поради щодо вибору магазину</h1>
+                <p class="section-description">Корисні рекомендації, які допоможуть вам зробити правильний вибір</p>
+
+                <div class="tips-grid">
+                    <!-- Порада 1 -->
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Перевіряйте офіційність</h3>
+                        <p>Надавайте перевагу офіційним магазинам та авторизованим дилерам. Вони гарантують:</p>
+                        <ul>
+                            <li>Оригінальну продукцію</li>
+                            <li>Офіційну гарантію</li>
+                            <li>Якісне обслуговування</li>
+                        </ul>
+                    </div>
+
+                    <!-- Порада 2 -->
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <h3>Читайте відгуки</h3>
+                        <p>Перед покупкою ознайомтеся з:</p>
+                        <ul>
+                            <li>Відгуками на Google Maps</li>
+                            <li>Рейтингом на нашому сайті</li>
+                            <li>Коментарями в соціальних мережах</li>
+                        </ul>
+                    </div>
+
+                    <!-- Порада 3 -->
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="percent"></i>
+                        </div>
+                        <h3>Порівнюйте ціни</h3>
+                        <p>Використовуйте сервіси порівняння цін:</p>
+                        <ul>
+                            <li>hotline.ua</li>
+                            <li>price.ua</li>
+                            <li>e-catalog.ua</li>
+                        </ul>
+                    </div>
+
+                    <!-- Порада 4 -->
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <h3>Сервісне обслуговування</h3>
+                        <p>Зверніть увагу на:</p>
+                        <ul>
+                            <li>Наявність сервісного центру</li>
+                            <li>Умови гарантійного ремонту</li>
+                            <li>Терміни обслуговування</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Корисні посилання -->
+                <div class="useful-links">
+                    <h2>Корисні посилання</h2>
+                    <div class="links-grid">
+                        <a href="https://hotline.ua" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="search"></i>
+                            <h4>Hotline.ua</h4>
+                            <p>Порівняння цін та відгуки</p>
+                        </a>
+                        <a href="https://price.ua" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="tag"></i>
+                            <h4>Price.ua</h4>
+                            <p>Каталог товарів та цін</p>
+                        </a>
+                        <a href="https://ek.ua/ua/" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="list"></i>
+                            <h4>E-Catalog</h4>
+                            <p>Технічні характеристики</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Про проект</h4>
+                    <p>Інтерактивна карта та рейтинг магазинів комп'ютерної техніки</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="rating.html">Рейтинг</a></li>
+                        <li><a href="map.html">Карта магазинів</a></li>
+                        <li><a href="tips.html">Поради покупцям</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакти</h4>
+                    <p>Email: kozhuhar.contact@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechMap. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
